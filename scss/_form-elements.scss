@@ -36,7 +36,7 @@
   cursor: not-allowed;
 }
 
-/* All elemenets regardless of types */
+// All elemenets regardless of types
 input,
 select,
 option,
@@ -55,48 +55,7 @@ input::file-selector-button {
   line-height: var(--leading-inputs);
 }
 
-/* All elements with types */
-input[type="button"],
-input[type="checkbox"],
-input[type="color"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="file"],
-input[type="hidden"],
-input[type="image"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="radio"],
-input[type="range"],
-input[type="reset"],
-input[type="search"],
-input[type="submit"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-select,
-option,
-textarea,
-button,
-datalist,
-fieldset,
-legend,
-optgroup,
-output {
-}
-
-/* Radio & Checkbox */
-input[type="checkbox"],
-input[type="radio"] {
-}
-
-/* Buttons */
-
-/* Select, Buttons and text-fields */
+// Text-fields, buttons, and drop-down lists
 select,
 textarea,
 input[type="date"],
@@ -126,7 +85,7 @@ input::file-selector-button {
   }
 }
 
-/* All text-fields x select */
+// All text-fields and select drop-down list
 select,
 textarea,
 input[type="date"],
@@ -157,6 +116,7 @@ input[type="week"] {
     }
   }
 
+  // Optimize/theme the validity of required inputs
   &:required {
     &:valid {
       &:hover,
@@ -184,12 +144,14 @@ input[type="week"] {
     }
   }
 
+  // Optimize/theme the selection within inputs
   &::selection {
     background-color: var(--co-body-accent);
     color: var(--co-body-accent-contrast);
   }
 }
 
+// Select drop-down lists
 select {
   &:not([disabled], [readonly]) {
     option {
@@ -204,6 +166,7 @@ select {
   }
 }
 
+// Color inputs
 input[type="color"] {
   cursor: pointer;
   border-style: solid;
@@ -226,6 +189,7 @@ input[type="color"] {
   }
 }
 
+// Buttons/Actions
 button,
 input[type="reset"],
 input[type="submit"],
@@ -247,7 +211,7 @@ input::file-selector-button {
   }
 }
 
-/* Labels */
+// Labels
 label {
   cursor: pointer;
   display: block;
@@ -259,8 +223,18 @@ label {
   & + textarea {
     margin-top: var(--margin-label);
   }
+
+  // Optimization for inputs nested in labels
+  &:has(input:disabled) {
+    :disabled {
+      opacity: 1;
+    }
+    opacity: var(--opacity-input-disabled);
+    cursor: not-allowed;
+  }
 }
 
+// Textarea
 textarea {
   width: var(--width-textarea);
   height: var(--height-textarea);
@@ -271,14 +245,7 @@ textarea {
   }
 }
 
+// File input's button
 input::file-selector-button {
   margin-right: var(--margin-form-gap);
-}
-
-label:has(input:disabled) {
-  :disabled {
-    opacity: 1;
-  }
-  opacity: var(--opacity-input-disabled);
-  cursor: not-allowed;
 }
