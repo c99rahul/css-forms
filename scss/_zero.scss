@@ -1,0 +1,192 @@
+/**
+ * ---------------------------------------------------------------------
+ * zero.css
+ * =====================================================================
+ *
+ * A modern approach to normalizing HTML elements and providing a 
+ * foundation for your web projects.
+ * 
+ * @since  1.0.0
+ * @author Rahul C.
+ * @link   https://github.com/c99rahul/zero.css
+ * @link   https://twitter.com/c99rahul
+ */
+/*
+ * Commonality
+ * -----------
+ *
+ * A semantic unit of HTML elements sharing similar styling traits, 
+ * forming a cohesive visual foundation. 
+
+ * Ideally, all elements within this group:
+ *
+ *  1. Have zero padding and margin for clean presentation
+ *  2. Inherit font properties and text-alignment for uniformity
+ *  3. Maintain consistent vertical alignment
+ *
+ * @since 1.0.0
+ */
+html,
+body,
+div,
+span,
+header,
+main,
+footer,
+article,
+aside,
+section,
+nav,
+p,
+blockquote,
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+abbr,
+acronym,
+cite,
+code,
+dfn,
+em,
+q,
+strong,
+samp,
+var,
+time,
+mark,
+small,
+del,
+ins,
+sub,
+sup,
+kbd,
+tt,
+s,
+strike,
+big,
+img,
+audio,
+video,
+figure,
+figcaption,
+form,
+input,
+textarea,
+button,
+select,
+option,
+optgroup,
+label,
+fieldset,
+legend,
+datalist,
+keygen,
+progress,
+meter,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+object,
+iframe,
+embed,
+br,
+hr,
+canvas {
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+  font: inherit; /* 2 */
+  text-align: inherit; /* 2 */
+  vertical-align: baseline; /* 3 */
+}
+
+/*
+ * Universal box-sizing
+ * --------------------
+ *
+ * While the performance gain might be minimal in modern browsers,
+ * inheriting `box-sizing` provides semantic consistency and aligns
+ * with recommended practices for responsive and maintainable layouts.
+ *
+ * Consider overriding this behavior for specific elements if necessary
+ * based on your design requirements.
+ *
+ * @since 1.0.0
+ */
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*
+ * Optimized media
+ * ---------------
+ *
+ * Optimizing media elements is essential for responsive web design, 
+ * ensuring they adapt seamlessly across various devices and screen 
+ * sizes. This group of media elements is optimized to:
+ *
+ *  1. Fit within the available width
+ *  2. Avoid shrinking vertically when inconsistent height attribute 
+ *     is provided to the media element
+ *
+ * This image, for example, won't extend beyond its parent element's 
+ * horizontal boundaries while preserving its aspect ratio by ignoring 
+ * the `height` HTML attribute.
+ * 
+ *  `<img src="path/to/a-2000x1600-image.format" 
+ *        width="500"
+ *        height="300" />`
+ *
+ * @since 1.0.0
+ */
+img,
+svg,
+video,
+audio,
+iframe {
+  max-width: 100%; /* 1 */
+  height: auto; /* 2 */
+}
+
+/*
+ * Normalizing form-elements
+ * -------------------------
+ *
+ * While most form elements have been normalized, some specific aspects 
+ * still require attention.
+ *
+ * One such area is the cursor style. Implementing appropriate cursor 
+ * styles for form elements will enhance the UX and provide 
+ * visual cues for interaction.
+ *
+ * @since 1.0.0
+ */
+label,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"] {
+  cursor: pointer;
+}

@@ -1,0 +1,56 @@
+$spacing__block: 1.5;
+$spacing__semi-block: 1;
+$spacing__container: 2;
+
+$leading__copy: 160%;
+$leading__titles: 120%;
+
+$width__container: 48;
+
+$font-stack__body: sans-serif;
+
+$font-size__h1: 200%;
+$font-size__h2: 175%;
+$font-size__h3: 150%;
+
+$weight__titles: bold;
+
+$color__copy: #666;
+$color__titles: #222;
+
+body {
+  font: 1em / #{$leading__copy} #{$font-stack__body};
+  color: $color__copy;
+}
+
+p {
+  & + p {
+    margin-top: $spacing__block * 1em;
+  }
+}
+
+h1,
+h2,
+h3 {
+  line-height: $leading__titles;
+  margin: $spacing__semi-block * 1em 0 $spacing__semi-block * 1rem;
+  font-weight: $weight__titles;
+  color: $color__titles;
+}
+
+h1 {
+  font-size: $font-size__h1;
+}
+
+h2 {
+  font-size: $font-size__h2;
+}
+
+h3 {
+  font-size: $font-size__h3;
+}
+
+.container {
+  max-width: $width__container * 1em;
+  padding: $spacing__container * 1em;
+}

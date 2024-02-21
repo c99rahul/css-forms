@@ -1,0 +1,28 @@
+.dark-mode {
+  --co-body-bg: #111;
+  --co-body-text: #ddd;
+  --co-body-accent: #6c5ce7;
+  --co-body-accent-contrast: #fff;
+
+  --co-textfld-bg: #222;
+  --co-textfld-border: #333;
+  --co-textfld-active-border: #444;
+  --co-textfld-focus-border: var(--co-body-accent);
+
+  --co-textfld-valid-border: hsl(140 90% 20%);
+  --co-textfld-valid-active-border: hsl(140 90% 30%);
+  --co-textfld-valid-focus-border: hsl(140 90% 45%);
+
+  --co-textfld-invalid-border: hsl(20 90% 20%);
+  --co-textfld-invalid-active-border: hsl(20 90% 30%);
+  --co-textfld-invalid-focus-border: hsl(20 90% 45%);
+
+  --co-btn-text: var(--co-body-accent-contrast);
+  --co-btn-bg: var(--co-body-accent);
+  --co-btn-active-bg: #333;
+  --co-btn-focus-bg: #333;
+}
+
+.dark-mode {
+  color-scheme: dark;
+}

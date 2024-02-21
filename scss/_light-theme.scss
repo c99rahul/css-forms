@@ -1,0 +1,24 @@
+:root {
+  --co-body-bg: #eee;
+  --co-body-text: #444;
+  --co-body-accent: #4834d4;
+  --co-body-accent-contrast: #fff;
+
+  --co-textfld-bg: #fff;
+  --co-textfld-border: #ccc;
+  --co-textfld-active-border: #aaa;
+  --co-textfld-focus-border: var(--co-body-accent);
+
+  --co-textfld-valid-border: hsl(140 50% 75%);
+  --co-textfld-valid-active-border: hsl(140 50% 65%);
+  --co-textfld-valid-focus-border: hsl(140 50% 50%);
+
+  --co-textfld-invalid-border: hsl(20 65% 75%);
+  --co-textfld-invalid-active-border: hsl(20 65% 65%);
+  --co-textfld-invalid-focus-border: hsl(20 65% 50%);
+
+  --co-btn-text: var(--co-body-accent-contrast);
+  --co-btn-bg: var(--co-body-accent);
+  --co-btn-active-bg: #333;
+  --co-btn-focus-bg: #333;
+}

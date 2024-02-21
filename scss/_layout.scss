@@ -1,0 +1,22 @@
+.site-container {
+  padding: 1.5em;
+  max-width: 1160px;
+  margin: 3em auto;
+}
+
+.form-row {
+  gap: var(--margin-form-gap);
+  & + & {
+    margin-top: var(--margin-form-gap);
+  }
+}
+
+.btn-group {
+  gap: var(--margin-btn-gap);
+}
+
+.form-row,
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+}
